@@ -1,0 +1,21 @@
+@import '../../../core/colors';
+
+.home {
+  text-align: center;
+}
+
+.App-logo {
+  width: 300px;
+  height: 300px;
+  animation: spin 8s linear infinite;
+  transition: transform 03s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

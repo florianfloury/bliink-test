@@ -1,0 +1,31 @@
+@import '../../../core/colors';
+
+.tabs-wrapper {
+  background-color: $primary;
+}
+
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs-item {
+  padding: 10px;
+  color: $white;
+  transition: background-color 0.3s ease-in-out;
+  text-transform: uppercase;
+
+  &.selected {
+    background-color: $secondary;
+  }
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active {
+    background-color: $secondary-70;
+  }
+}
