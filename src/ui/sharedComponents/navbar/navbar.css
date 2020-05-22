@@ -1,5 +1,9 @@
-.tabs-wrapper {
-  background-color: #c63030;
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #ffa800;
 }
 
 .tabs {
@@ -10,19 +14,26 @@
 }
 
 .tabs-item {
-  padding: 10px;
+  padding: 10px 30px;
   color: #ffffff;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color, border 0.3s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 3px solid #00000000;
+}
+.tabs-item::first-letter {
   text-transform: uppercase;
 }
 .tabs-item.selected {
-  background-color: #993232;
+  background-color: #e08e01;
+  border-bottom: 3px solid #ffffff;
 }
 .tabs-item:hover {
-  background-color: #993232;
+  background-color: #e08e01;
+  border-bottom: 3px solid #ffffff;
 }
 .tabs-item:active {
-  background-color: rgba(153, 50, 50, 0.7);
+  background-color: rgba(224, 142, 1, 0.7);
 }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -1,6 +1,10 @@
 @import '../../../core/colors';
 
-.tabs-wrapper {
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
   background-color: $primary;
 }
 
@@ -12,17 +16,25 @@
 }
 
 .tabs-item {
-  padding: 10px;
+  padding: 10px 30px;
   color: $white;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color, border 0.3s ease-in-out;
   text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 3px solid $transparent;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 
   &.selected {
     background-color: $secondary;
+    border-bottom: 3px solid $white;
   }
 
   &:hover {
     background-color: $secondary;
+    border-bottom: 3px solid $white;
   }
 
   &:active {

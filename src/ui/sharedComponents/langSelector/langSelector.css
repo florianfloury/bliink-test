@@ -1,0 +1,51 @@
+.lang-selector {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.lang-selector .lang-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lang-selector .lang-list.visible {
+  display: flex;
+  flex: 1;
+}
+.lang-selector .lang-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.lang-selector .lang-item .flag {
+  height: 30px;
+  width: 30px;
+}
+.lang-selector .lang-item.visible {
+  background-color: #e08e01;
+}
+.lang-selector .lang-item.visible:nth-child(1) {
+  border-radius: 5px 5px 0 0;
+}
+.lang-selector .lang-item.visible:nth-last-child(1) {
+  border-radius: 0 0 5px 5px;
+}
+.lang-selector .lang-item:hover {
+  background-color: rgba(224, 142, 1, 0.7);
+}
+.lang-selector .lang-item:active {
+  background-color: rgba(224, 142, 1, 0.5);
+}
+
+/*# sourceMappingURL=langSelector.css.map */

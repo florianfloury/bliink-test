@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames'
 
-export const Tabs = (props) => {
-  const {tabs, onTabChange} = props;
-  const [selectedTab, setSelectedTab] = useState(0);
+import {LifecycleHelpers} from "../../../utils";
 
-  useEffect(() => {
+export const Tabs = (props) => {
+  const {tabs, currentTab, onTabChange} = props;
+  const [selectedTab, setSelectedTab] = useState(currentTab || 0);
+
+  LifecycleHelpers.useDidUpdate(() => {
     onTabChange(selectedTab);
   }, [onTabChange, selectedTab]);
 

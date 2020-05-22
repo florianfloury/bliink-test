@@ -1,0 +1,61 @@
+@import '../../../core/colors';
+
+.dropDown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  z-index: 1;
+
+  .options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex: 1;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+
+    .option-item {
+      &:hover {
+        background-color: $secondary-70;
+      }
+      &:active {
+        background-color: $secondary-50;
+      }
+    }
+  }
+
+  .option-item {
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:nth-child(1) {
+      border-radius: 5px;
+    }
+
+    &.visible {
+      &:nth-child(1) {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:nth-last-child(1) {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}
+

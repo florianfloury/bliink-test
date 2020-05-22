@@ -1,5 +1,7 @@
-import HomeRedux from './home';
+import homeRedux from './home';
+import coreRedux from './core';
 
 export {
-  HomeRedux,
+  homeRedux,
+  coreRedux
 }

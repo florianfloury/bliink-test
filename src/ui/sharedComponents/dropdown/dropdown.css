@@ -1,0 +1,49 @@
+.dropDown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  z-index: 1;
+}
+.dropDown .options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.dropDown .options-list.visible {
+  display: flex;
+}
+.dropDown .options-list .option-item:hover {
+  background-color: rgba(224, 142, 1, 0.7);
+}
+.dropDown .options-list .option-item:active {
+  background-color: rgba(224, 142, 1, 0.5);
+}
+.dropDown .option-item {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e08e01;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.dropDown .option-item:nth-child(1) {
+  border-radius: 5px;
+}
+.dropDown .option-item.visible:nth-child(1) {
+  border-radius: 5px 5px 0 0;
+}
+.dropDown .option-item.visible:nth-last-child(1) {
+  border-radius: 0 0 5px 5px;
+}
+
+/*# sourceMappingURL=dropdown.css.map */

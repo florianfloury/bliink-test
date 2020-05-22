@@ -8,17 +8,17 @@ import './home.scss';
 export const Home = () => (
   <div className="home">
     <header className="App-header">
-      <img src={AssetsHelpers.getSVG(SVG_NAME.LOGO)} className="App-logo" alt="logo"/>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
+      <img src={AssetsHelpers.getSVG(SVG_NAME.REACT_LOGO)} className="App-logo" alt="logo"/>
+      <p className="text">
+        {AssetsHelpers.getText('helloWorld.editFile', {path: 'src/App.js'})}
       </p>
       <a
-        className="App-link"
+        className="text"
         href="https://reactjs.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React
+        {AssetsHelpers.getText('helloWorld.learnReact')}
       </a>
     </header>
   </div>

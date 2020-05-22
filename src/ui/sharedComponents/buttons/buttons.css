@@ -7,28 +7,30 @@
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .button.primary {
   color: #ffffff;
-  background-color: #c63030;
+  background-color: #ffa800;
   border: 1px solid #00000000;
 }
 .button.primary:hover {
-  background-color: #993232;
+  background-color: #e08e01;
 }
 .button.primary:active {
-  background-color: rgba(153, 50, 50, 0.7);
+  background-color: rgba(224, 142, 1, 0.7);
 }
 .button.edge-primary {
-  color: #c63030;
+  color: #ffa800;
   background-color: #ffffff;
-  border: 1px solid #c63030;
+  border: 1px solid #ffa800;
 }
 .button.edge-primary:hover {
-  background-color: rgba(198, 48, 48, 0.3);
+  background-color: rgba(255, 168, 0, 0.3);
 }
 .button.edge-primary:active {
-  background-color: rgba(198, 48, 48, 0.5);
+  background-color: rgba(255, 168, 0, 0.5);
 }
 
 /*# sourceMappingURL=buttons.css.map */

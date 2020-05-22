@@ -1,0 +1,60 @@
+@import '../../../core/colors';
+
+.lang-selector {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  .lang-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &.visible {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  .lang-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    .flag {
+      height: 30px;
+      width: 30px;
+    }
+
+    &.visible {
+      background-color: $secondary;
+
+      &:nth-child(1) {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:nth-last-child(1) {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+
+    &:hover {
+      background-color: $secondary-70;
+    }
+    &:active {
+      background-color: $secondary-50;
+    }
+  }
+}
+

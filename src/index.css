@@ -1,6 +1,7 @@
 html, body, #root {
   height: 100%;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 #root {
@@ -15,8 +16,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+.text {
+  color: #000000;
 }
 
 /*# sourceMappingURL=index.css.map */

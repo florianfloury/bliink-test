@@ -2,16 +2,18 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 
 import {history} from './history';
-import {HomeRedux} from '../redux';
+import {homeRedux, coreRedux} from '../redux';
 
 const navigator = () => ({
   push: (url, state) => history.push(url, state),
   back: () => history.goBack(),
-  replace: (url, state) => history.replace(url, state)
+  replace: (url, state) => history.replace(url, state),
+  currentPath: history.location.pathname,
 });
 
 const reducers = {
-  home: HomeRedux.reducer,
+  core: coreRedux.reducer,
+  home: homeRedux.reducer,
 };
 
 const enhanceReducer = combineReducers({...reducers, navigator});
